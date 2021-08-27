@@ -1,12 +1,15 @@
 <script>
 	import '../tailwind.css';
-    export let showList = false;
+    // export let showList = false;
 </script>
 
-<nav class="bg-purple-800 shadow-lg">
+<div class="flex justify-around">
+	<h1 class="text-5xl">WIP</h1>
+</div>
+
+<!-- <nav class="bg-purple-800 shadow-lg">
 	<div class="mx-32">
 		<div class="flex justify-between">
-			<!-- Mobile menu button -->
 			<div class="md:hidden flex items-center">
 				<button class="outline-none mobile-menu-button" on:click="{showList = !showList}">
 					<svg
@@ -23,10 +26,8 @@
 					</svg>
 				</button>
 			</div>
-			<!-- website logo -->
 			<div>
-				<!-- svelte-ignore a11y-invalid-attribute -->
-				<a href="#" class="flex items-center py-4 px-2">
+				<a href="/" class="flex items-center py-4 px-2">
 					<span class="font-semibold text-white text-lg"> Braden Coates </span>
 				</a>
 			</div>
@@ -44,7 +45,6 @@
 			</div>
 		</div>
 	</div>
-	<!-- Mobile menu -->
 	<div class="{showList ? '' : 'hidden'} md:hidden mobile-menu transition duration-300">
 		<ul class="">
 			<li class="active">
@@ -61,4 +61,4 @@
 		</ul>
 	</div>
 </nav>
-<slot />
+<slot /> -->
