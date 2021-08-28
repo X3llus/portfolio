@@ -1,13 +1,9 @@
 <script>
 	import '../tailwind.css';
-    // export let showList = false;
+    export let showList = false;
 </script>
 
-<div class="flex justify-around">
-	<h1 class="text-5xl">WIP</h1>
-</div>
-
-<!-- <nav class="bg-purple-800 shadow-lg">
+<nav class="bg-purple-800 shadow-lg">
 	<div class="mx-32">
 		<div class="flex justify-between">
 			<div class="md:hidden flex items-center">
@@ -61,4 +57,4 @@
 		</ul>
 	</div>
 </nav>
-<slot /> -->
+<slot />
