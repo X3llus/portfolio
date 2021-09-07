@@ -1,13 +1,23 @@
 <script>
+	export let title;
+	export let lang;
+	export let desc;
+	export let _id;
 
-	export let name;
-	export let job;
-
+	$: languages = lang.toString();
 </script>
 
-<div class="flex justify-around">
-	<div>
-		<h1 class="text-2xl">Name: {name}</h1>
-    	<h2 class="text-xl">Job: {job}</h2>
+<div class="w-2/4 rounded overflow-hidden shadow-lg p-8">
+	<div class="grid grid-cols-2">
+		<div>
+			<h1 class="text-2xl">{title}</h1>
+			<h2 class="text-lg">Languages: {languages}</h2>
+		</div>
+		<div>
+			<p class="text-base">
+				{desc}
+			</p>
+			<a class="text-purple-700 hover:underline" href="/projects/{_id}">Test</a>
+		</div>
 	</div>
 </div>

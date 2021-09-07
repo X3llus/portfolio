@@ -1,17 +1,35 @@
 <script>
-    import Card from './card.svelte';
-    export let projects;
+	import Card from './card.svelte';
+	export let projects;
 
-    $: i = 0;
+	let i = 0;
 
-    $: project = projects[i];
+	$: project = projects[i];
+	$: pLength = projects.length;
+
+	function updateProject(inc) {
+		if (inc && i < pLength - 1) {
+			return i++;
+		}
+		if (i >= 1) {
+			return i--;
+		}
+	}
 </script>
 
-<!-- {#each projects as { name, job }}
-    <h1 class="text-2xl">Name: {name}</h1>
-    <h2 class="text-xl">Job: {job}</h2>
-{/each} -->
-
-<Card name={project.name} job={project.job} />
-
-<input type="number" bind:value={i} min=0 max={projects.length} />
+{#if project != null}
+	<div class="content-center flex justify-around">
+		<Card {...project} />
+	</div>
+	<div class="flex justify-around mt-8">
+		<div class="inline-flex">
+			<button on:click={() => updateProject(false)} class="bg-gray-300 hover:bg-gray-400 text-gray-800 font-bold py-2 px-4 rounded-l">
+			  Prev
+			</button>
+			<span class="bg-gray-300 text-gray-800 font-bold py-2 px-4">{i+1}/{pLength}</span>
+			<button on:click={() => updateProject(true)} class="bg-gray-300 hover:bg-gray-400 text-gray-800 font-bold py-2 px-4 rounded-r">
+			  Next
+			</button>
+		</div>
+	</div>
+{/if}
