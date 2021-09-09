@@ -4,7 +4,7 @@
 	export let desc;
 	export let _id;
 
-	$: languages = lang.toString();
+	$: languages = lang.join(', ');
 </script>
 
 <div class="w-2/4 rounded overflow-hidden shadow-lg p-8">
@@ -17,7 +17,7 @@
 			<p class="text-base">
 				{desc}
 			</p>
-			<a class="text-purple-700 hover:underline" href="/projects/{_id}">Test</a>
+			<a class="text-purple-700 hover:underline" href="/projects/{_id}">More...</a>
 		</div>
 	</div>
 </div>

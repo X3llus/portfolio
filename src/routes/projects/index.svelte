@@ -2,7 +2,7 @@
     import { onMount } from 'svelte';
 
     onMount(async () => {
-        const resp = await fetch('/projects/api');
+        const resp = await fetch('/projects/api?options={starred: true}');
         const projects = await resp.json();
         console.log(projects);
     });
