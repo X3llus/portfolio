@@ -16,7 +16,7 @@
 	let projects = [];
 </script>
 
-<div class="divide-y divide-purple-800 pl-32 pr-32">
+<div class="divide-y divide-purple-800 md:px-32 px-8">
 	<div class="pb-8">
 		<div class="flex justify-around">
 			<h1 class="text-5xl mt-8">Welcome To My Website</h1>
@@ -113,6 +113,6 @@
 
 <style>
 	.about-me p {
-		margin-bottom: .75rem;
+		margin-bottom: 0.75rem;
 	}
 </style>

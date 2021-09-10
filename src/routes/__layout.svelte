@@ -1,13 +1,13 @@
 <script>
 	import '../tailwind.css';
-    export let showList = false;
+	export let showList = false;
 </script>
 
 <nav class="bg-purple-800 shadow-lg">
-	<div class="mx-32">
+	<div class="md:mx-32 mx-8">
 		<div class="flex justify-between">
 			<div class="md:hidden flex items-center">
-				<button class="outline-none mobile-menu-button" on:click="{showList = !showList}">
+				<button class="outline-none mobile-menu-button" on:click={(showList = !showList)}>
 					<svg
 						class="w-6 h-6 text-white"
 						x-show="!showMenu"
@@ -44,14 +44,17 @@
 	<div class="{showList ? '' : 'hidden'} md:hidden mobile-menu transition duration-300">
 		<ul class="">
 			<li class="active">
-				<a href="/" class="block text-sm px-2 py-4 text-white hover:text-yellow-400 transition duration-300"
+				<a
+					href="/"
+					class="block text-sm px-2 py-4 text-white hover:text-yellow-400 transition duration-300"
 					>Home</a
 				>
 			</li>
 			<li>
 				<a
 					href="projects"
-					class="block text-sm px-2 py-4 text-white hover:text-yellow-400 transition duration-300">Projects</a
+					class="block text-sm px-2 py-4 text-white hover:text-yellow-400 transition duration-300"
+					>Projects</a
 				>
 			</li>
 		</ul>
