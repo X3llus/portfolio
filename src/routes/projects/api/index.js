@@ -19,16 +19,3 @@ export async function get() {
 		}
 	}
 }
-
-// export async function post(request) {
-//     const client = await clientPromise;
-//     const db = client.db('projects');
-//     const collection = db.collection('projects');
-//     const result = collection.insertOne(request.body);
-//     return {
-//         status: 200,
-//         body: {
-//             result: result
-//         }
-//     };
-// }

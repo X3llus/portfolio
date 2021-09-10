@@ -16,11 +16,9 @@
 
 	onMount(async () => {
 		const resp = await fetch(`/projects/api/id?_id=${_id}`);
-		const projects = await resp.json();
+		const projects = (await resp.json()).project;
 		console.log(projects);
 	});
 </script>
 
-<p>
-	WIP
-</p>
+<p>WIP</p>
