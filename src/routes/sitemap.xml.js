@@ -15,17 +15,17 @@ export async function get() {
         xmlns:video="https://www.google.com/schemas/sitemap-video/1.1"
       >
         <url>
-            <loc>bradencoates.ca</loc>
+            <loc>https://www.bradencoates.ca</loc>
             <changefreq>weekly</changefreq>
             <priority>0.7</priority>
         </url>
         <url>
-            <loc>bradencoates.ca/about</loc>
+            <loc>https://www.bradencoates.ca/about</loc>
             <changefreq>monthly</changefreq>
             <priority>0.5</priority>
         </url>
         <url>
-            <loc>bradencoates.ca/projects</loc>
+            <loc>https://www.bradencoates.ca/projects</loc>
             <changefreq>always</changefreq>
             <priority>0.3</priority>
         </url>
