@@ -1,6 +1,7 @@
 <script>
 	import { onMount } from 'svelte';
 	import Carousel from '$lib/carousel.svelte';
+	import SEO from '$lib/SEO.svelte';
 
 	onMount(async () => {
 		try {
@@ -16,6 +17,7 @@
 	let projects = [];
 </script>
 
+<SEO pageTitle="Braden Coates, Fullstack and App Dev" description="Welcome to my website, My name is Braden and I am a third year computer science student, I have experience in full stack and app developement." />
 <div class="md:px-32 px-8">
 	<div class="pb-8">
 		<div class="flex justify-around">
