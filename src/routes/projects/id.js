@@ -1,9 +1,9 @@
-import clientPromise from "../../../lib/mongodb";
+import clientPromise from "$lib/mongodb";
 import { ObjectId } from "mongodb";
 
-export async function get(req) {
+export async function get({ url: { searchParams } }) {
   try {
-    const _id = req.query.get('_id');
+    const _id = searchParams.get('_id');
     const client = await clientPromise;
     const db = client.db('projects');
     const collection = db.collection('projects');

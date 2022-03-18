@@ -2,15 +2,22 @@
 	export let title;
 	export let lang;
 	export let desc;
+	export let starred;
+	export let link = '';
 	export let _id;
 
 	$: languages = lang.join(', ');
 </script>
 
-<div class="md:w-2/4 rounded overflow-hidden shadow-lg p-8">
+<div class="rounded overflow-hidden shadow-lg p-8">
 	<div class="md:grid md:grid-cols-2">
 		<div>
-			<h1 class="text-2xl">{title}</h1>
+			<h1 class="text-2xl flex">
+				{title}
+				{#if link}
+					<a href={link} class="ml-4"><img src="/GitHub-Mark-32px.png" alt="link to github" /></a>
+				{/if}
+			</h1>
 			<h2 class="text-lg">Languages: {languages}</h2>
 		</div>
 		<div>

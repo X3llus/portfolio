@@ -1,6 +1,6 @@
 <script context="module">
-	export const load = ({ page }) => {
-		const _id = page.params._id;
+	export const load = ({ params }) => {
+		const _id = params._id;
 		return {
 			props: {
 				_id
@@ -15,7 +15,7 @@
 	import { onMount } from 'svelte';
 
 	onMount(async () => {
-		const resp = await fetch(`/projects/api/id?_id=${_id}`);
+		const resp = await fetch(`/projects/id?_id=${_id}`);
 		const projects = (await resp.json()).project;
 		console.log(projects);
 	});

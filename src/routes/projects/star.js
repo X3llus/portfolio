@@ -1,5 +1,4 @@
-import clientPromise from "../../../lib/mongodb";
-import { checkCached, cacheStarred, cachedProjects } from "../../../lib/starredProjects";
+import clientPromise from "$lib/mongodb";
 
 export async function get() {
 	try {
@@ -19,12 +18,9 @@ export async function get() {
 }
 
 async function getStarred() {
-	if (checkCached())
-		return cachedProjects;
 	const client = await clientPromise;
 	const db = client.db('projects');
 	const collection = db.collection('projects');
 	const projects = await collection.find({ 'starred': true }).toArray();
-	cacheStarred(projects);
 	return projects
 }
