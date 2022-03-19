@@ -108,7 +108,7 @@
 					</li>
 				</ul>
 			</div>
-			<div class="bg-gray-300 py-16 px-11 rounded-r">
+			<div class="bg-gray-300 py-16 px-11 rounded-r-3xl">
 				<div class="py-4 flex justify-around">
 					<img src="/smartphone_black_48dp.svg" alt="browser" width="64px" />
 				</div>
