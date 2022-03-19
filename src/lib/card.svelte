@@ -6,10 +6,12 @@
 	export let link = '';
 	export let _id;
 
+	export let clientHeight;
+
 	$: languages = lang.join(', ');
 </script>
 
-<div class="rounded overflow-hidden shadow-lg p-8">
+<div class="rounded overflow-hidden p-8" style="box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);" bind:clientHeight>
 	<div class="md:grid md:grid-cols-2">
 		<div>
 			<h1 class="text-2xl flex">

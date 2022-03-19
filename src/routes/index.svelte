@@ -27,7 +27,7 @@
 			<h1 class="text-6xl mt-8 font-semibold">Welcome To My Website</h1>
 		</div>
 		<div class="flex justify-around">
-			<p class="text-2xl mt-8 w-1/3 sm:w-3/4 break-words text-center">
+			<p class="text-2xl mt-8 md:w-1/3 sm:w-3/4 break-words text-center">
 				My name is Braden and I am a third year computer science student, I have experience in full
 				stack developement and app developement.
 			</p>
@@ -46,8 +46,8 @@
 		<div class="flex justify-around">
 			<h2 class="text-4xl my-8 font-semibold">Skills</h2>
 		</div>
-		<div class="grid grid-cols-5 sm:grid-cols-3 divide-x divide-red-50 w-full">
-			<div class="bg-gray-300 py-16 px-11 rounded-l col-start-2 sm:col-start-1">
+		<div class="grid md:grid-cols-5 sm:grid-cols-3 divide-x divide-red-50 w-full">
+			<div class="bg-gray-300 py-16 px-11 rounded-l-3xl md:col-start-2 sm:col-start-1">
 				<div class="py-4 flex justify-around">
 					<img src="/web_black_48dp.svg" alt="browser" width="64px" />
 				</div>

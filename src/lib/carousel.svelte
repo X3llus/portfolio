@@ -11,6 +11,7 @@
 	let to;
 	let from;
 	let transitioning;
+	let cardHeight;
 
 	function updateProject(inc) {
 		if (inc) return increment();
@@ -49,12 +50,12 @@
 </script>
 
 {#if project != null}
-	<div class="w-full overflow-x-hidden py-4 h-40">
+	<div class="w-full overflow-x-hidden p-4" style="height: calc({cardHeight}px + 32px);">
 		{#each projects as prj}
 			<div class="flex justify-around relative">
 				{#if prj == project}
 					<div in:fly|local={{ x: from, duration: 1000, delay: 200 }} out:fly|local={{ x: to, duration: 1000}} class="absolute">
-						<Card {...prj} />
+						<Card {...prj} bind:clientHeight={cardHeight} />
 					</div>
 				{/if}
 			</div>
